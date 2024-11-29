@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="">Tabela do Brasileirão</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col><strong>Posição</strong></ion-col>
+      <ion-col><strong>Logo</strong></ion-col>
+      <ion-col><strong>Nome</strong></ion-col>
+      <ion-col><strong>Pontos</strong></ion-col>
+    </ion-row>
+
+    <!-- Linhas de dados -->
+    <ion-row *ngFor="let time of times">
+      <ion-col class="texto">{{ time.posicao }}</ion-col>
+      <ion-col><img [src]="time.logo" alt="Logo" width="50" height="50"></ion-col>
+      <ion-col class="texto">{{ time.nome }}</ion-col>
+      <ion-col class="texto">{{ time.pontos }}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
